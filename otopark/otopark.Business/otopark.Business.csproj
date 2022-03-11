@@ -1,12 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+    <ProjectReference Include="..\otopark.DataAccess\otopark.DataAccess.csproj" />
+    <ProjectReference Include="..\otopark.Entities\otopark.Entities.csproj" />
   </ItemGroup>
 
 </Project>

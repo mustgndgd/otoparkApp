@@ -1,8 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model CarPlateViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+
+<form id="myform" method="post">
+     
+    <div class="form-group">
+        <label  asp-for="carPlate" class="control-label "> </label>
+        <input asp-for="carPlate" class="form-control " />
+        <span asp-validation-for="carPlate" class="text-danger"></span>
+    </div>
+
+    <input type="submit" value=" Giriş / Çıkış Yap" />
+
+</form>

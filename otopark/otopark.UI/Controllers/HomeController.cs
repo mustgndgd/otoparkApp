@@ -23,10 +23,16 @@ namespace otopark.UI.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Index(CarPlateViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             return View();
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

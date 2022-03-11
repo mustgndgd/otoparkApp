@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\EntityFramework\Context\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\otopark.Core\otopark.Core.csproj" />
+    <ProjectReference Include="..\otopark.Entities\otopark.Entities.csproj" />
   </ItemGroup>
 
 </Project>
