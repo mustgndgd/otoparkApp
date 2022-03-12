@@ -15,7 +15,7 @@ namespace otopark.Business.Concrete
 
         public RoleManager(IRoleDal roleDal)
         {
-            _roleDal=   roleDal;
+            _roleDal=roleDal;
         }
         public IDataResult<Role> GetById(int roleId)
         {

@@ -6,20 +6,17 @@
 @if (Model.isRecordAdded == true && Model.vehiclePlate != "" )
 {
     <div class="alert alert-success" role="alert">
-        @Model.vehiclePlate  plakalı araç @Model.vehicleLoginTime giriş yapmıştır...
+        @Model.Message
     </div>
 }
-else if (Model.isRecordAdded==false && Model.errorMessage != "")
+else if (Model.isRecordAdded==false && Model.Message != "")
 {
     <div class="alert alert-danger" role="alert">
-        @Model.errorMessage
+        @Model.Message
     </div>
 }
 else
 {
-    <div class="alert alert-danger" role="alert">
-        @Model.errorMessage
-    </div>
 }
 
 <form id="myform" method="post">
@@ -32,7 +29,6 @@ else
         <input asp-for="CarPlateProperties.carPlateCityArea" placeholder="Şehir kodu" type="number"  class="form-control">
         <input asp-for="CarPlateProperties.carPlateTextArea" placeholder="Harf kodu" type="text"  class="form-control">
         <input asp-for="CarPlateProperties.carPlateNumberArea" placeholder="Sayı kodu" type="number"  class="form-control">
-
     </div>
     <br/>
     <input type="submit" value=" Giriş / Çıkış Yap" />

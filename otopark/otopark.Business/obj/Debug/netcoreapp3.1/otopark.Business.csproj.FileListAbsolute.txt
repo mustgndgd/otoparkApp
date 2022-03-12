@@ -1,0 +1,17 @@
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\bin\Debug\netcoreapp3.1\otopark.Business.deps.json
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\bin\Debug\netcoreapp3.1\otopark.Business.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\bin\Debug\netcoreapp3.1\otopark.Business.pdb
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\bin\Debug\netcoreapp3.1\otopark.Core.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\bin\Debug\netcoreapp3.1\otopark.DataAccess.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\bin\Debug\netcoreapp3.1\otopark.Entities.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\bin\Debug\netcoreapp3.1\otopark.DataAccess.pdb
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\bin\Debug\netcoreapp3.1\otopark.Entities.pdb
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\bin\Debug\netcoreapp3.1\otopark.Core.pdb
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\obj\Debug\netcoreapp3.1\otopark.Business.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\obj\Debug\netcoreapp3.1\otopark.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\obj\Debug\netcoreapp3.1\otopark.Business.AssemblyInfoInputs.cache
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\obj\Debug\netcoreapp3.1\otopark.Business.AssemblyInfo.cs
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\obj\Debug\netcoreapp3.1\otopark.Business.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\obj\Debug\netcoreapp3.1\otopark.Business.csproj.CopyComplete
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\obj\Debug\netcoreapp3.1\otopark.Business.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Business\obj\Debug\netcoreapp3.1\otopark.Business.pdb

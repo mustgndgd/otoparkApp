@@ -1,0 +1,15 @@
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\bin\Debug\netcoreapp3.1\otopark.DataAccess.deps.json
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\bin\Debug\netcoreapp3.1\otopark.DataAccess.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\bin\Debug\netcoreapp3.1\otopark.DataAccess.pdb
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\bin\Debug\netcoreapp3.1\otopark.Core.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\bin\Debug\netcoreapp3.1\otopark.Entities.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\bin\Debug\netcoreapp3.1\otopark.Core.pdb
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\bin\Debug\netcoreapp3.1\otopark.Entities.pdb
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\obj\Debug\netcoreapp3.1\otopark.DataAccess.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\obj\Debug\netcoreapp3.1\otopark.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\obj\Debug\netcoreapp3.1\otopark.DataAccess.AssemblyInfoInputs.cache
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\obj\Debug\netcoreapp3.1\otopark.DataAccess.AssemblyInfo.cs
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\obj\Debug\netcoreapp3.1\otopark.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\obj\Debug\netcoreapp3.1\otopark.DataAccess.csproj.CopyComplete
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\obj\Debug\netcoreapp3.1\otopark.DataAccess.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.DataAccess\obj\Debug\netcoreapp3.1\otopark.DataAccess.pdb

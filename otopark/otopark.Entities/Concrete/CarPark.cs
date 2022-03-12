@@ -8,9 +8,8 @@ namespace otopark.Entities.Concrete
 {
     public class CarPark:IEntity
     {
-        public int Id { get; set; }
-        public int PriceId { get; set; }
+        public int Id { get; set; } 
         public int Capacity { get; set; }
-
+        public decimal Price { get; set; }
     }
 }

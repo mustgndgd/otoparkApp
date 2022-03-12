@@ -1,0 +1,13 @@
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\bin\Debug\netcoreapp3.1\otopark.Entities.deps.json
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\bin\Debug\netcoreapp3.1\otopark.Entities.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\bin\Debug\netcoreapp3.1\otopark.Entities.pdb
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\bin\Debug\netcoreapp3.1\otopark.Core.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\bin\Debug\netcoreapp3.1\otopark.Core.pdb
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\obj\Debug\netcoreapp3.1\otopark.Entities.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\obj\Debug\netcoreapp3.1\otopark.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\obj\Debug\netcoreapp3.1\otopark.Entities.AssemblyInfoInputs.cache
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\obj\Debug\netcoreapp3.1\otopark.Entities.AssemblyInfo.cs
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\obj\Debug\netcoreapp3.1\otopark.Entities.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\obj\Debug\netcoreapp3.1\otopark.Entities.csproj.CopyComplete
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\obj\Debug\netcoreapp3.1\otopark.Entities.dll
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.Entities\obj\Debug\netcoreapp3.1\otopark.Entities.pdb

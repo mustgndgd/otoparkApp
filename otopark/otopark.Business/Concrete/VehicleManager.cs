@@ -34,7 +34,7 @@ namespace otopark.Business.Concrete
         }
         public IResult Add(Vehicle vehicle)
         {
-            _vehicleDal.Update(vehicle);
+            _vehicleDal.Add(vehicle);
             return new SuccessResult(Messages.vehicleAdded);
         }
         public IResult Update(Vehicle vehicle)
