@@ -13,5 +13,6 @@ namespace otopark.Entities.Concrete
         public DateTime LoginTime { get; set; }
         public DateTime ExitTime { get; set; }
         public int TotalPrice { get; set; }
+        public bool State { get; set; }
     }
 }

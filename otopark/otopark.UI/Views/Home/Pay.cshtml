@@ -1,0 +1,57 @@
+﻿@model otopark.UI.Models.PayModelView
+
+@{
+    ViewData["Title"] = "Pay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Araç Çıkış Ekranı</h1>
+<hr />
+
+<h4>Ödeme bilgileri aşağıdadır </h4>
+<hr />
+
+
+ 
+
+
+<form id="payForm" methot="post">
+    <div class=" table-responsive">
+        <table class="table table-striped">
+           
+            <tbody>
+            <tr>
+                <th scope="row"> <label  asp-for="Plate" class="control-label "> </label></th>
+                <td>  <input asp-for="Plate" class="form-control " disabled="disabled" /> </td>
+            </tr>
+            <tr>
+                <th scope="row"> <label  asp-for="LoginTime" class="control-label "> </label></th>
+                <td>  <input asp-for="LoginTime" class="form-control " disabled="disabled" />  </td>
+            </tr>
+            <tr>
+                <th scope="row"> <label  asp-for="ExitTime" class="control-label "> </label></th>
+                <td>  <input asp-for="ExitTime" class="form-control " disabled="disabled" />  </td>
+            </tr>
+            <tr>
+                <th scope="row"> <label  asp-for="Duration" class="control-label "> </label></th>
+                <td>  <input asp-for="Duration" class="form-control " disabled="disabled" />  </td>
+            </tr>
+            <tr>
+                <th scope="row"> <label  asp-for="Price" class="control-label "> </label></th>
+                <td>  <input asp-for="Price" class="form-control " disabled="disabled" />  </td>
+            </tr>
+            <tr>
+                <th ></th>
+                <td>  <input type="submit" value=" ONAYLA" class="btn btn-success" /></td>
+              
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</form>
+
+ 
+
+
