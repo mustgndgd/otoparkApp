@@ -1,0 +1,24 @@
+﻿ @model LoginViewModel
+<div   align="center"  >
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form id="myForm" method="post">
+                <div class="form-group">
+                    <label asp-for="userName" class="control-label"></label>
+                    <input asp-for="userName" class="form-control" />
+                    <span asp-validation-for="userName" class="text-danger" placeholder="Kullanıcı Adı"></span>
+                </div>
+                <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password"  type="password" class="form-control" />
+                        <span asp-validation-for="Password" type="password" class="text-danger" placeholder="Şifre"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Giriş yap</button>
+                <a href="/Home" class="btn btn-success">Anasayfaya dön</a>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    
+</div>
