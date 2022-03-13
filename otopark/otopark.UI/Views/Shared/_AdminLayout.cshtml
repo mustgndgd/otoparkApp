@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - otopark.UI</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link  rel="stylesheet" href="css/dataTables.bootstrap4.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css" />
+    
+    <link rel="stylesheet" href="css/site.css" />
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />  
+  
+    <link href="css/dataTables.bootstrap.min.css" rel="stylesheet" />  
+    <link href="css/responsive.bootstrap.min.css" rel="stylesheet" />  
+  
+    <script src="js/jquery.dataTables.min.js"></script>  
+    <script src="js/dataTables.bootstrap4.min.js "></script>  
+
 </head>
 <body>
     <header>
@@ -19,14 +27,15 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
+                         
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Admin Anasayfa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AllRecords">Tüm kayıtlar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Admin Index</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AllRecordsSortAsc">Tüm kayıtlar (Fiyata göre Sıralı)</a>
                         </li>
                     </ul>
                 </div>
@@ -38,17 +47,17 @@
             @RenderBody()
         </main>
     </div>
-
+  
     <footer class="border-top footer text-muted">
     </footer>
+ 
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="js/jquery.dataTables.min.js"> </script>
-    <script src="js/dataTables.bootstrap4.min.js"></script>
     <!-- Page level custom scripts -->
    
-    @RenderSection("statics", required: false)
-
+    @RenderSection("adminscript", required: false)
+    @RenderSection("statics",false)
 </body>
 </html>

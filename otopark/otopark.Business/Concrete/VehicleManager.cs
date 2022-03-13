@@ -32,6 +32,12 @@ namespace otopark.Business.Concrete
         {
             return new SuccessDataResult<List<Vehicle>>(_vehicleDal.GetList().ToList());
         }
+
+        public IDataResult<string> GetPlateByVehicleId(int vehicleId)
+        {
+            return new SuccessDataResult<string>(_vehicleDal.Get(v => v.Id == vehicleId).Plate);
+        }
+
         public IResult Add(Vehicle vehicle)
         {
             _vehicleDal.Add(vehicle);

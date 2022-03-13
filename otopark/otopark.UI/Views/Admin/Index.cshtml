@@ -2,3 +2,53 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+@using Microsoft.CodeAnalysis.CSharp.Syntax
+@model otopark.UI.Models.Admin.AdminIndexModel
+
+<h3> Otopark İstatistikleri </h3>
+
+<div   align="center"  >
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form id="myForm" method="post">
+                <div class="form-group">
+                    <label   class="control-label">Saatlik ücret</label>
+                    <input asp-for="carParkTimePrice" class="form-control" />
+                    <input asp-for="capacity" class="form-control" />
+                    @if (@ViewBag.Message != null && @ViewBag.Message =="güncellendi")
+                    {
+                        <div class="alert alert-success" role="alert">
+                            @ViewBag.Message
+                        </div>
+                    } 
+                    else if(@ViewBag.Message != null && @ViewBag.Message =="başarısız"){
+                    <div class="alert alert-danger" role="alert">
+                        Kapasite aktif kayıt sayısından küçük olamaz...
+                    </div>
+                    }
+                    else
+                    {
+                    }
+                </div>
+                <button type="submit" class="btn btn-primary">Giriş yap</button>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+ 
+<div class="container">  
+    <br />  
+    <h4> Aktif doluluk oranı</h4>
+    <div style="width:90%; margin:0 auto;">  
+        <div class="row">
+            <div class="col-md-3 align-content-center">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="(@Model.currentVehicleCount/@Model.capacity)*100" aria-valuemin="0" aria-valuemax="100">  @Model.currentVehicleCount</div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>  
+
