@@ -11,16 +11,16 @@ namespace otopark.UI.Models
         public string Plate { get; set; }
         
         [Display(Name = "Giriş zamanı")]
-        public DateTime LoginTime { get; set; }
+        public string LoginTime { get; set; }
         
         [Display(Name = "Çıkış zamanı")]
-        public DateTime ExitTime { get; set; }
+        public string ExitTime { get; set; }
         
         [Display(Name = "Toplam süre")]
         public string Duration { get; set; }
         
         [Display(Name = "Ücret")]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
 
     }
 }

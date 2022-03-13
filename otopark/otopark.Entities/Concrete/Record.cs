@@ -12,7 +12,8 @@ namespace otopark.Entities.Concrete
         public int CarParkId { get; set; }
         public DateTime LoginTime { get; set; }
         public DateTime ExitTime { get; set; }
-        public int TotalPrice { get; set; }
+        public decimal TotalPrice { get; set; }
         public bool State { get; set; }
+        public int Duration { get; set; }
     }
 }

@@ -33,15 +33,15 @@ namespace otopark.UI.Controllers
         }
 
 
-        private int selectedParkId = 1; //default olarak id 1 olan park yerini getiriyoruz ileride ihtiyaca göre değiştirilebilir...
+        public int selectedParkId = 1; //default olarak id 1 olan park yerini getiriyoruz ileride ihtiyaca göre değiştirilebilir...
+
 
         //Ana sayfa
         public IActionResult Index()
         {
             CarPlateViewModel model = new CarPlateViewModel
             {
-               // park = _carParkService.GetById(selectedParkId).Data, 
-                park=_carParkService.GetAll().Data.LastOrDefault(), 
+                park = _carParkService.GetById(selectedParkId).Data, 
                 isRecordAdded = false,
                 vehiclePlate = "",
                 vehicleLoginTime = new DateTime(),
@@ -51,12 +51,14 @@ namespace otopark.UI.Controllers
         }
 
         
-        // giriş çıkış işlemi
+        // Giriş Çıkış işlemleri
         [HttpPost]
         public IActionResult Index(CarPlateViewModel model)
         {
             model.park = _carParkService.GetById(selectedParkId).Data;
-            //Ekleme kontrol işlemleri burada yapılacak
+            
+            
+            //Ekleme kontrol işlemleri burada yapılacak herhangi bir hatalı veri girişinde hata mesajı gösterilecek
             if (!ModelState.IsValid)
             {
                 CarPlateViewModel errorModel = new CarPlateViewModel
@@ -69,92 +71,102 @@ namespace otopark.UI.Controllers
                 return View(errorModel);
             }
 
-            int onLineRecords = _recordService.GetOnlineRecordCountByParkId(selectedParkId).Data == null ?  0 : _recordService.GetOnlineRecordCountByParkId(selectedParkId).Data;
-            if (model.park.Capacity >= onLineRecords ) 
+            string plate = convertToPlate(model.CarPlateProperties.carPlateCityArea,
+                model.CarPlateProperties.carPlateTextArea, model.CarPlateProperties.carPlateNumberArea);
+            
+            int onLineRecords = _recordService.GetRecordCountByParkId(selectedParkId).Data;
+
+            var vehicle = _vehicleService.GetByPlate(plate).Data;
+
+            if (vehicle == null)
             {
-                // ekleme işlemi
-                // kayıt ekleme işlemi 
-                string plate = convertToPlate(model.CarPlateProperties.carPlateCityArea,
-                    model.CarPlateProperties.carPlateTextArea, model.CarPlateProperties.carPlateNumberArea);
+                _vehicleService.Add(new Vehicle { Plate = plate });
+                vehicle = _vehicleService.GetAll().Data.LastOrDefault();
+            }
 
-                var vehicle = _vehicleService.GetByPlate(plate).Data;
 
-                if (vehicle == null)
-                {
-                    _vehicleService.Add(new Vehicle { Plate = plate });
-                }
+            if ( _recordService.isCarInParkCheck(vehicle.Id).Data )
+            {
+                // Araç otoparktan çıkış yapma işlemleri
+                
+                var record = _recordService.RecordByVehicleId(vehicle.Id).Data;
+                TimeSpan span = record.ExitTime.Subtract(record.LoginTime);
 
-                _recordService.Add(new Record { CarParkId = selectedParkId, State = true, LoginTime = DateTime.Now,ExitTime = DateTime.Now, VehicleId = _vehicleService.GetByPlate(plate).Data.Id });
-                var record = _recordService.GetAll().Data.LastOrDefault();
+                record.ExitTime= DateTime.Now;
+                record.Duration = Convert.ToInt32(Math.Ceiling(span.TotalHours));
+                record.TotalPrice = record.Duration * _carParkService.GetById(selectedParkId).Data.Price;
+                _recordService.Update(record);
 
-                CarPlateViewModel successModel = new CarPlateViewModel
-                {
-                    isRecordAdded = true,
-                    vehiclePlate = vehicle.Plate,
-                    vehicleLoginTime = record.LoginTime,
-                    Message = $" {vehicle.Plate} plakalı araç başarıyla kaydedildi."
-                };
-                return View(successModel);
+                //Çıkış bilgilendirme ve onay sayfasına yönlendirilir.
+                return RedirectToAction("PayPage", "Home", record);
             }
             else
             {
-                // park yeri dolu uyarısı
-                CarPlateViewModel errorModel = new CarPlateViewModel
+                
+                // Otopark giriş kontrol ve gerçekleştirimi
+                if (model.park.Capacity > onLineRecords)
                 {
-                    isRecordAdded = false,
-                    vehiclePlate = "",
-                    vehicleLoginTime = new DateTime(),
-                    Message = "Park Kapasitesi Dolu!"
-                };
-                return View(errorModel);
-            }
+                     
 
-          
+                    // Otoparka giriş kaydının yapılması
+                    _recordService.Add(new Record { CarParkId = selectedParkId, State = true, LoginTime = DateTime.Now, ExitTime = DateTime.Now, VehicleId = _vehicleService.GetByPlate(plate).Data.Id });
+
+                    var record = _recordService.GetAll().Data.LastOrDefault();
+
+                    CarPlateViewModel successModel = new CarPlateViewModel
+                    {
+                        isRecordAdded = true,
+                        vehiclePlate = vehicle.Plate,
+                        vehicleLoginTime = record.LoginTime,
+                        Message = $" {vehicle.Plate} plakalı araç başarıyla kaydedildi."
+                    };
+                    return View(successModel);
+                }
+                else
+                {
+                    // Park kapasitesinin dolu olduğu uyarısı
+                    CarPlateViewModel errorModel = new CarPlateViewModel
+                    {
+                        isRecordAdded = false,
+                        vehiclePlate = "",
+                        vehicleLoginTime = new DateTime(),
+                        Message = "Park Kapasitesi Dolu!"
+                    };
+                    return View(errorModel);
+                }
+            }
+             
         }
 
-        public IActionResult Pay()
+        public IActionResult PayPage(Record record)
         {
             PayModelView model = new PayModelView
             {
-                vehiclheId = 123,
-                Plate = "test",
-                Price = 13.2, 
-                Duration = "süre", 
-                LoginTime = new DateTime(2022, 12, 12, 12, 12, 12),
-                ExitTime = new DateTime(2022, 12, 12, 12, 12, 12)
+                vehiclheId = record.VehicleId,
+                Plate = _vehicleService.GetById(record.VehicleId).Data.Plate,
+                Price = record.TotalPrice, 
+                Duration = record.Duration.ToString(), 
+                LoginTime = record.LoginTime.ToLongTimeString(),
+                ExitTime = record.ExitTime.ToShortDateString()
             };
             return View(model);
         }
 
-        [HttpPost]
         [Route("Home/Pay/{id?}")]
         public IActionResult Pay(int id)
         {
-            
+            var record  = _recordService.RecordByVehicleId(id).Data;
+            record.State = false;
+            _recordService.Update(record);
             //ödeme işlemini gerçekleştirir...
-            return View();
+            return RedirectToAction("Index","Home");
         }
-
 
         private string convertToPlate(int city, string text, int num)
         {
             return city.ToString() + text + num.ToString();
         }
-
-
-
-
-
-
-
-
-
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+         
     }
 }
 

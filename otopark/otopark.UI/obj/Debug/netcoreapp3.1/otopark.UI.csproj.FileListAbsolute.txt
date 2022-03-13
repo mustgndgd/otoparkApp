@@ -148,7 +148,6 @@ C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\
 C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
-C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Pay.cshtml.g.cs
 C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\bin\Debug\netcoreapp3.1\Autofac.dll
 C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
 C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\bin\Debug\netcoreapp3.1\EntityFramework.dll
@@ -160,3 +159,4 @@ C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\
 C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\bin\Debug\netcoreapp3.1\otopark.Core.pdb
 C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\bin\Debug\netcoreapp3.1\otopark.DataAccess.pdb
 C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\bin\Debug\netcoreapp3.1\otopark.Entities.pdb
+C:\Users\asus\Desktop\visual studio projeleri\vs2022\otoparkUygulaması\otopark\otopark.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PayPage.cshtml.g.cs

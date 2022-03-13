@@ -31,12 +31,21 @@ namespace otopark.Business.Concrete
 
         public IDataResult<List<Record>> GetAllOnlineRecords()
         {
-            return new SuccessDataResult<List<Record>>(_recordDal.GetList().Where(r=> r.State == true).ToList());
+            return new SuccessDataResult<List<Record>>(_recordDal.GetList(r=> r.State == true).ToList());
         }
 
-        public IDataResult<int> GetOnlineRecordCountByParkId(int parkId)
+        public IDataResult<int> GetRecordCountByParkId(int parkId)
         {
-            return new SuccessDataResult<int>(_recordDal.GetList(r => r.CarParkId == parkId && r.State == true).Count);
+            return new SuccessDataResult<int>(_recordDal.GetList(r => r.CarParkId == parkId).ToList().Count);
+        }
+
+        public IDataResult<bool> isCarInParkCheck(int vehicleId)
+        {
+            if ( _recordDal.GetList(r=>r.State==true && r.VehicleId == vehicleId ).Count == 1 )
+            {
+                return new SuccessDataResult<bool>(true);
+            }
+            return new SuccessDataResult<bool>(false);
         }
 
         public IResult Add(Record record)

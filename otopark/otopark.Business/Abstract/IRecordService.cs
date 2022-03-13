@@ -12,7 +12,10 @@ namespace otopark.Business.Abstract
         IDataResult<Record> RecordByVehicleId(int plateId);
         IDataResult<List<Record>> GetAll();
         IDataResult<List<Record>> GetAllOnlineRecords();
-        IDataResult<int> GetOnlineRecordCountByParkId(int parkId);
+        IDataResult<int> GetRecordCountByParkId(int parkId);
+
+        IDataResult<bool> isCarInParkCheck(int vehicleId);
+     
         IResult Add(Record record);
         IResult Update(Record record);
         IResult Delete(Record record);
